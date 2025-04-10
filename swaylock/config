@@ -1,0 +1,25 @@
+indicator-caps-lock
+font=JetBrains Mono
+font-size=30
+clock
+indicator
+indicator-radius=120
+indicator-thickness=8
+indicator-radius=125
+line-color=#6c7086
+text-color=#cdd6f4
+inside-color=#31324498
+inside-ver-color=#a6e3a1
+line-ver-color=#a6e3a1
+ring-ver-color=#a6e3a198
+ring-color=#cba6f7
+key-hl-color=#f5c2e7
+separator-color=#585b70
+layout-text-color=#bac2de
+line-wrong-color=#f38ba8
+effect-blur=10x10
+show-failed-attempts
+screenshots
+time-effects
+fade-in 3
+grace 30

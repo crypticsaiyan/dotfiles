@@ -1,0 +1,40 @@
+#bar {
+    margin: 0px;
+    font-size: 16px;
+    font-family: JetBrains Mono;
+    /* background-color: #1e1e2e;  */
+    color: #cdd6f4; /* Text */
+}
+
+button, image {
+    background: none;
+    border-style: none;
+    box-shadow: none;
+    color: #cdd6f4; /* Text */
+}
+
+button {
+    padding-top: 10px;
+    margin: 5px;
+    border-radius: 6px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+button:hover {
+    background-color: rgba(243, 139, 168, 0.2); /* Red */
+    color: #f38ba8;
+    transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
+}
+
+button:focus {
+    background-color: rgba(203, 166, 247, 0.3); /* Mauve */
+    color: #d1b9ee;
+}
+
+grid {
+    background-color: #313244; /* Surface0 */
+    border-radius: 8px;
+    padding: 8px;
+    box-shadow: 0 0 30px rgba(137, 180, 250, 0.2); /* Blue */
+}
+

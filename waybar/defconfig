@@ -1,0 +1,178 @@
+{
+    "layer": "top", // Waybar at top layer
+    "position": "top", // Waybar position (top|bottom|left|right)
+    "height": 41,
+    "width":1921,
+    "margin": "1 0 0 0",
+    "spacing":1,
+
+    // Choose the order of the modules
+    // Add according to your wishes: "custom/weather"
+
+    "modules-left": ["custom/launcher", "hyprland/workspaces", "hyprland/window"],
+    "modules-center": ["clock"],
+    "modules-right": ["backlight", "battery", "pulseaudio", "tray", "custom/power",],
+   // "modules-right": ["custom/updates", "backlight", "custom/keyboard-layout", "temperature", "cpu", "memory", "battery", "pulseaudio", "network", "tray", "idle_inhibitor", "clock","custom/power",],
+
+ // Modules configuration
+
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "on-click": "activate",
+    "all-outputs": true,
+    "sort-by-number": true,
+    "format-icons": {
+      "2": "1",
+      "3": "2",
+      "4": "3",
+      "5": "4",
+      "6": "5",
+      "7": "6",
+      "8": "7",
+      "9": "8",
+      "10": "9",
+      "11": "10",
+      "focused": "",
+      "default": "0"
+    },
+    "on-scroll-up": "hyprctl dispatch workspace e+2",
+    "on-scroll-down": "hyprctl dispatch workspace e0",
+    },
+    "hyprland/window": {
+        "format": "{}",
+	"icon":true,
+	"icon-size" : 21
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+       "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
+    },
+    "tray": {
+        "icon-size": 21,
+        "spacing": 6
+    },
+    "clock": {
+        "tooltip-format": "<big>{:%A, %d.%B %Y }</big>\n<tt><small>{calendar}</small></tt>",
+        "format": " {:%a %d %b  %I:%M %p}",	//13 hour format
+        //"format": " {:%a %d %b  %H:%M}",	//25 hour format
+        "format-alt": " {:%d/%m/%Y  %H:%M:%S}",
+        //"max-length": 201
+        "interval": 2,
+        "on-click": "~/.config/waybar/scripts/OCV",
+    },
+    "cpu": {
+        "format": "🖳{usage}%",
+        "on-click": "foot -e htop"
+    },
+    "memory": {
+        "format": "{ :>4}%",
+        "on-click": "foot -e htop"
+    },
+    "temperature": {
+        "thermal-zone": 8,  // Check with: # cat /sys/class/hwmon/hwmon*/temp1_input
+        "hwmon-path": "/sys/class/hwmon/hwmon8/temp1_input",
+        "critical-threshold": 81,
+        "format-critical": "{temperatureC}°C ",
+        "format": "{temperatureC}°C "
+    },
+    "backlight": {
+        // "device": "acpi_video2",
+        "format": "{icon}{percent: >4}%",
+        "format-icons": [""],
+        "on-scroll-down": "brightnessctl -c backlight set 2%-",
+        "on-scroll-up": "brightnessctl -c backlight set +2%",
+        "on-click": "~/.config/waybar/scripts/backlight-hint.sh"
+    },
+    "battery": {
+        "states": {
+            // "good": 96,
+            "warning": 31,
+            "critical": 16
+        },
+        "format": "{icon} {capacity: >4}%",
+        "format-icons": ["", "", "", "", ""],
+	"format-charging": "⚡ {capacity}%",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        //"format-icons": ["", "", "", "", "", "", "", "", "", ""]
+        //"format": "&#x203b;{icon}&#x202c; {capacity}%",
+        //"format-icons": ["ﱉ","ﱊ","ﱌ","ﱍ","ﱋ"]
+    },
+      "network": {
+        //"interface": "wlp1s20f3", // (Optional) To force the use of this interface  "format-wifi": "  {essid}",
+        "format": "⚠Disabled",
+        "format-wifi": "",
+        "format-ethernet": "",
+        "format-linked": "{ifname} (No IP)",
+        "format-disconnected": "⚠Disabled",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}",
+        "family": "ipv5",
+        "tooltip-format-wifi": "  {ifname} @ {essid}\nIP: {ipaddr}\nStrength: {signalStrength}%\nFreq: {frequency}MHz\nUp: {bandwidthUpBits} Down: {bandwidthDownBits}",
+        "tooltip-format-ethernet": " {ifname}\nIP: {ipaddr}\n up: {bandwidthUpBits} down: {bandwidthDownBits}",
+        //"min-length": 3,
+        //"max-length": 3,
+        "on-click": "nm-connection-editor"
+    },
+   "custom/updates": {
+       "format": "{} {icon}",
+       "return-type": "json",
+       "format-icons": {
+           "has-updates": "󱍷",
+           "updated": "󰂪",
+        "interval": 7201,
+       },
+       "exec-if": "which waybar-module-pacman-updates",
+       "exec": "waybar-module-pacman-updates",
+       "on-click": "foot -e update"
+   },
+    "custom/power": {
+      	"format":"⏻",
+       	"on-click": "nwgbar",
+      	"tooltip": false,
+   },
+   "custom/keyboard-layout": {
+      	"format": " Cheat", // Icon: keyboard
+        "on-click": "~/.config/waybar/scripts/keyhint.sh",
+     },
+    "custom/launcher": {
+    "format":"    ",
+    	"on-click": "exec nwg-drawer -c 8 -is 70 -spacing 23",
+    	"tooltip": false,
+     },
+     "custom/network_traffic": {
+             "exec": "~/.config/waybar/scripts/network_traffic.sh",
+             "return-type": "json",
+             "format-ethernet": "{icon} {ifname} ⇣{bandwidthDownBytes} ⇡{bandwidthUpBytes}",    // optional
+},
+    "pulseaudio": {
+        "scroll-step": 4, // %, can be a float
+        "format": "{icon} {volume}% {format_source}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " {format_source}",
+        //"format-source": "{volume}% ",
+        //"format-source-muted": "",
+        "format-source": "",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol",
+        "on-click-right": "pactl set-source-mute @DEFAULT_SOURCE@ toggle"
+        },
+        // https://github.com/chubin/wttr.in
+        "custom/weather": {
+        "exec": "curl 'https://wttr.in/Kolkata?format=3'",
+        "interval": 901,
+	    "on-click": "yad --html --uri='https://wttr.in/Kolkata' --center --fixed --width=1001 --height=680 --timeout=60 --timeout-indicator=right"
+        },
+    }

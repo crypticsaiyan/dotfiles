@@ -1,0 +1,309 @@
+/* =============================================================================
+ *
+ * Waybar configuration
+ *
+ * Configuration reference: https://github.com/Alexays/Waybar/wiki/Configuration
+ *
+ * =========================================================================== */
+ 
+/* -----------------------------------------------------------------------------
+ * Keyframes
+ * -------------------------------------------------------------------------- */
+@import "mocha.css";
+
+/*
+Polar Night
+nord0  #2e3440
+nord1  #3b4252
+nord2  #434c5e
+nord3  #4c566a
+Snow Storm
+nord4  #d8dee9
+nord5  #e5e9f0
+nord6  #eceff4
+Frost
+nord7  #8fbcbb
+nord8  #88c0d0
+nord9  #81a1c1
+nord10 #5e81ac
+Aurora
+nord11 #bf616a
+nord12 #d08770
+nord13 #ebcb8b
+nord14 #a3be8c
+nord15 #b48ead
+*/
+
+/* -----------------------------------------------------------------------------
+ * Base styles
+ * -------------------------------------------------------------------------- */
+ 
+/* Reset all styles */
+
+/* * {
+    color: #eceff4;
+    border: 0;
+    border-radius: 0;
+    padding: 0 0;
+    font-family: JetBrains Mono;
+    font-size: 15px;
+    margin-right: 4px;
+    margin-left: 4px;
+    padding-bottom:1.5px;
+   }
+
+window#waybar {
+    margin: 0;
+    background:rgba (0, 0, 0, 0.5);
+    border-radius: 20px 20px 20px 20px;
+    background-color: shade(@base, 0.9);
+    border: 2px solid alpha(@crust, 0.3);
+}
+
+#workspaces button {
+    padding: 2px 0px;
+    border-bottom: 2px;
+    color: #eceff4;
+    border-color: #d8dee9;
+    border-style: solid;
+    margin-top:2px;
+}
+
+#workspaces button.active {
+    border-color: #81a1c1;
+}
+
+#clock, #battery, #cpu, #memory,#idle_inhibitor, #temperature,#custom-keyboard-layout, #backlight, #network, #pulseaudio, #tray, #window,#custom-launcher,#custom-power,#custom-updates ,#custom-network_traffic,#custom-weather{
+    padding: 0 3px;
+    border-bottom: 2px;
+    border-style: solid;
+} */
+
+
+/* -----------------------------------------------------------------------------
+ * Module styles
+ * -------------------------------------------------------------------------- */
+
+/* #clock {
+ color:#ffffff;
+}
+
+#backlight {
+    color: #ffffff;
+}
+
+#battery {
+    color: #ffffff;
+}
+
+#battery.charging {
+    color: #ffffff;
+}
+
+@keyframes blink {
+    to {
+        color: #4c566a;
+        background-color: #eceff4;
+    }
+}
+
+#battery.critical:not(.charging) {
+    background: #bf616a;
+    color: #eceff4;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#cpu {
+    color:#a3be8c ;
+}
+
+#memory {
+    color: #d3869b;
+}
+
+#network.disabled {
+    color:#bf616a;
+}
+
+#network{
+    color:#a3be8c;
+}
+
+#network.disconnected {
+    color: #bf616a;
+}
+
+#pulseaudio {
+    color: #b48ead;
+}
+
+#pulseaudio.muted {
+    color: #3b4252;
+}
+
+#temperature {
+    color: #8fbcbb;
+}
+
+#temperature.critical {
+    color: #bf616a;
+}
+
+#idle_inhibitor {
+   color: #ebcb8b;
+}
+
+#tray {
+}
+
+#custom-launcher{
+        font-size: 20px;
+        background-image: url('/home/cryptosaiyan/.config/waybar/launcher.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        border-style: hidden;
+}
+
+#custom-power{
+    border-style: hidden;
+    margin-top:2px;    
+}
+
+#window{
+    border-style: hidden;
+    margin-top:1px;  
+}    
+#custom-keyboard-layout{
+   color:#d08770;
+}   
+#custom-network_traffic{
+   color:#d08770;
+}
+ */
+ * {
+    min-height: 0;
+    min-width: 0;
+    font-family: Lexend, "JetBrainsMono NFP";
+    font-size: 15px;
+    font-weight: 600;
+  }
+  
+  window#waybar {
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    /* background-color: #1e1e2e; */
+    /* background-color: #181825; */
+    background-color: #11111b;
+    /* background-color: rgba(24, 24, 37, 0.6); */
+  }
+  
+  #workspaces button {
+    padding: 0.3rem 0.6rem;
+    margin: 0.4rem 0.25rem;
+    border-radius: 6px;
+    /* background-color: #181825; */
+    background-color: #1e1e2e;
+    color: #cdd6f4;
+  }
+  
+  
+  #workspaces button:hover {
+    color: #1e1e2e;
+    background-color: #cdd6f4;
+  }
+  
+  #workspaces button.active {
+    background-color: #1e1e2e;
+    color: #89b4fa;
+  }
+  
+  #workspaces button.urgent {
+    background-color: #1e1e2e;
+    color: #f38ba8;
+  }
+  
+  #clock,
+  #pulseaudio,
+  #custom-logo,
+  #custom-power,
+  #custom-spotify,
+  #custom-notification,
+  #cpu,
+  #tray,
+  #memory,
+  #window,
+  #battery,
+  #mpris {
+    padding: 0.3rem 0.6rem;
+    margin: 0.4rem 0.25rem;
+    border-radius: 6px;
+    /* background-color: #181825; */
+    background-color: #1e1e2e;
+  }
+  
+  #mpris.playing {
+    color: #a6e3a1;
+  }
+  
+  #mpris.paused {
+    color: #9399b2;
+  }
+  
+  #custom-sep {
+    padding: 0px;
+    color: #585b70;
+  }
+  
+  window#waybar.empty #window {
+    background-color: transparent;
+  }
+  
+  #cpu {
+    color: #94e2d5;
+  }
+  
+  #memory {
+    color: #cba6f7;
+  }
+  
+  #clock {
+    color: #74c7ec;
+  }
+  
+  #clock.simpleclock {
+    color: #89b4fa;
+  }
+  
+  #window {
+    color: #cdd6f4;
+  }
+  
+  #pulseaudio {
+    color: #b4befe;
+  }
+  
+  #pulseaudio.muted {
+    color: #a6adc8;
+  }
+  
+  #custom-logo {
+    color: #89b4fa;
+  }
+  
+  #custom-power {
+    color: #f38ba8;
+  }
+  
+  #battery {
+    color: #f3e78b;
+  }
+  
+  tooltip {
+    background-color: #181825;
+    border: 2px solid #89b4fa;
+  }
