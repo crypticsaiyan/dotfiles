@@ -198,7 +198,8 @@ window#waybar {
     transition-duration: 0.5s;
     /* background-color: #1e1e2e; */
     /* background-color: #181825; */
-    background-color: #11111b;
+    /*background-color: #11111b; */
+    background-color: rgba(17, 17, 27, 0.1);
     /* background-color: rgba(24, 24, 37, 0.6); */
   }
   
@@ -207,7 +208,7 @@ window#waybar {
     margin: 0.4rem 0.25rem;
     border-radius: 6px;
     /* background-color: #181825; */
-    background-color: #1e1e2e;
+    background-color: rgba(30, 30, 46, 1);
     color: #cdd6f4;
   }
   
@@ -243,7 +244,7 @@ window#waybar {
     margin: 0.4rem 0.25rem;
     border-radius: 6px;
     /* background-color: #181825; */
-    background-color: #1e1e2e;
+    background-color: rgba(30, 30, 46, 1);
   }
   
   #mpris.playing {

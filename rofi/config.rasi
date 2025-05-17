@@ -11,18 +11,26 @@ configuration {
 @theme "/dev/null"
 
 * {
-  bg: #1e1e2e;
-  bg-alt: #585b70;
-  bg-selected: #313244;
+  main-bg:        #11111be6;
+  main-fg:        #cdd6f4ff;
+  main-br:        #cba6f7ff;
+  main-ex:        #f5e0dcff;
+  select-bg:      #b4befeff;
+  select-fg:      #11111bff;
+  separatorcolor: transparent;
+  border-color:   transparent;
 
-  fg: #cdd6f4;
-  fg-alt: #7f849c;
+  bg:             @main-bg;
+  bg-alt:         #585b70;
+  bg-selected:    #313244;
 
-  
-  border: 0;
-  margin: 0;
-  padding: 0;
-  spacing: 0;
+  fg:             @main-fg;
+  fg-alt:         #7f849c;
+
+  border:         0;
+  margin:         0;
+  padding:        0;
+  spacing:        0;
 }
 
 window {
@@ -37,8 +45,8 @@ element {
 }
 
 element selected {
-  text-color: @fg;
-  background-color: @bg-selected;
+  text-color: @select-fg;
+  background-color: @select-bg;
 }
 
 element-text {
@@ -62,20 +70,22 @@ entry {
 inputbar {
   children: [prompt, entry];
   background-color: @bg;
+  border-radius: 10px 10px 0px 0px;
 }
 
 listview {
   background-color: @bg;
   columns: 1;
   lines: 10;
+  border-radius: 0px 0px 10px 10px;
 }
 
 mainbox {
   children: [inputbar, listview];
   background-color: @bg;
-  border: 5px;
-  border-color: @fg-alt;
-  border-radius: 5px;
+  border: 3px;
+  border-color: @main-br;
+  border-radius: 10px;
 }
 
 prompt {
@@ -85,4 +95,5 @@ prompt {
   text-color: @fg;
 }
 
-/* vim: ft=sass
+/* vim: ft=sass */
+

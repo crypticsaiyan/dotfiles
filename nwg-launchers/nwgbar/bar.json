@@ -1,7 +1,7 @@
 [
   {
     "name": "_Lock screen",
-    "exec": "swaylock -f -i '/usr/share/wallpapers/garuda-wallpapers/Garuda-TilliDie-cube-105.png'",
+    "exec": "hyprlock",
     "icon": "/usr/share/nwg-launchers/nwgbar/images/lock.svg"
   },
   {
