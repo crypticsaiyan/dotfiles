@@ -11,6 +11,7 @@
     "modules-left": ["hyprland/workspaces", "hyprland/window"],
     "modules-center": ["mpris"],
     "modules-right": [
+      "backlight",
       "cpu",
       "memory",
       "pulseaudio",
@@ -49,7 +50,7 @@
       "active-only": false,
     },
     "hyprland/window": {
-      "format": "{title}",
+      "format": "{class}",
     },
     "tray": {
       "show-passive-items": true,
@@ -74,6 +75,14 @@
         "on-scroll": 1,
       },
       "tooltip-format": "<span color='#cdd6f4' font='Lexend 16'><tt><small>{calendar}</small></tt></span>",
+    },
+        "backlight": {
+        // "device": "acpi_video2",
+        "format": "{icon}{percent}%",
+        "format-icons": ["󰃞 ", "󰃟 ", "󰃝 ", "󰃠 ", "󰖨 "],
+        "on-scroll-down": "brightnessctl -c backlight set 2%-",
+        "on-scroll-up": "brightnessctl -c backlight set +2%",
+        "on-click": "~/.config/waybar/scripts/backlight-hint.sh"
     },
     "cpu": {
       "format": " {usage}%",
@@ -142,7 +151,7 @@
                 "󰁹"
             ]
         },
-        "format-full": "Charged ",
+        "format-full": "",
         "interval": 5,
         "states": {
             "warning": 20,

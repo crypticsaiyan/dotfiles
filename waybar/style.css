@@ -199,7 +199,7 @@ window#waybar {
     /* background-color: #1e1e2e; */
     /* background-color: #181825; */
     /*background-color: #11111b; */
-    background-color: rgba(17, 17, 27, 0.1);
+    background-color: rgba(17, 17, 27, 0);
     /* background-color: rgba(24, 24, 37, 0.6); */
   }
   
@@ -227,7 +227,8 @@ window#waybar {
     background-color: #1e1e2e;
     color: #f38ba8;
   }
-  
+
+  #backlight,
   #clock,
   #pulseaudio,
   #custom-logo,
@@ -308,3 +309,4 @@ window#waybar {
     background-color: #181825;
     border: 2px solid #89b4fa;
   }
+
