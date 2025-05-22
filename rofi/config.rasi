@@ -6,6 +6,10 @@ configuration {
   modi: "window,run,drun";
   show-icons: true;
   icon-theme: "Papirus";
+  kb-accept-entry: "Return";
+  kb-remove-to-eol: "";
+  kb-row-up: "Control+k,Up";
+  kb-row-down: "Control+j,Down"; 
 }
 
 @theme "/dev/null"
