@@ -213,6 +213,10 @@ window#waybar {
   }
   
   
+  #workspaces button:first-child {
+    margin-left: 8px;
+  }
+
   #workspaces button:hover {
     color: #1e1e2e;
     background-color: #cdd6f4;
@@ -299,6 +303,7 @@ window#waybar {
   
   #custom-power {
     color: #f38ba8;
+    margin-right: 8px;
   }
   
   #battery {
