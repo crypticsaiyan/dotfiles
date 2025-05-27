@@ -47,8 +47,8 @@
     "window-rewrite-default": "<span color='#b4befe'>󰀻</span>",
     "window-rewrite": {
       "title<.*youtube.*>": "<span color='#f38ba8'></span>",
+      "title<.*whatsapp.*>": "<span color='#94e2d5'></span>",
       "class<firefox>": "<span color='#fab387'></span>",
-      "class<firefox> title<.*github.*>": "<span color='#94e2d5'></span>",
       "kitty": "<span color='#89dceb'></span>",
       "code": "<span color='#89b4fa'>󰨞</span>",
       "spotify": "<span color='#a6e3a1'></span>",
