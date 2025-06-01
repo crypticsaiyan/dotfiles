@@ -39,7 +39,7 @@
       "paused": ""
     },
     "player-icons": {
-      "default": ""
+      "default": " "
     }
   },
   "hyprland/workspaces": {
@@ -110,7 +110,7 @@
     "format": "{icon}{volume}%",
     "format-muted": "  muted",
     "format-icons": {
-      "headphone": "",
+      "headphone": " ",
       "default": [" ", " ", " "]
     },
     "on-click": "pavucontrol"

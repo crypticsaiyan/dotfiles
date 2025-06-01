@@ -325,6 +325,14 @@ tooltip {
   padding: 2px 8px;
 }
 
+#custom-fans{
+  color: #cdd6f4;
+}
+
+#backlight{
+  color: #cdd6f4;
+}
+
 #battery.warning,
 #battery.critical,
 #battery.urgent {
