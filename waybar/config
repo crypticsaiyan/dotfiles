@@ -44,7 +44,7 @@
   },
   "hyprland/workspaces": {
     "format": "{icon} {windows}",
-    "format-window-separator": " " ,
+    "format-window-separator": "  " ,
     "window-rewrite-default": "<span color='#b4befe'>󰀻</span>",
     "window-rewrite": {
       "title<.*youtube.*>": "<span color='#f38ba8'></span>",
@@ -55,12 +55,14 @@
       "spotify": "<span color='#a6e3a1'></span>",
       "obsidian": "<span color='#cba6f7'></span>",
       "thunar": "<span color='#f5e0dc'></span>",
-      "title<yazi>": "<span color='#f5e0dc'></span>",
+      "class<yazi>": "<span color='#f5e0dc'></span>",
       "class<google-chrome>": "<span color='#f9e2af'></span>",
       "title<nvim>": "<span color='#94e2d5'></span>",
       "title<vim>": "<span color='#94e2d5'></span>",
-      "class<discord>": "<span color='#89b4fa'></span>",
-      "class<org.pwmt.zathura>": "<span color='#f38ba8'></span>"
+      "class<discord>": "<span color='#b4befe'></span>",
+      "class<org.pwmt.zathura>": "<span color='#f38ba8'></span>",
+      "class<cheese>": "<span color='#f9e2af'></span>",
+      "class<blueman-manager>": "<span color='#89b4fa'>B</span>"
     },
     "all-outputs": true,
     "disable-scroll": false,
