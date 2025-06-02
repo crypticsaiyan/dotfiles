@@ -58,7 +58,8 @@
       "title<yazi>": "<span color='#f5e0dc'></span>",
       "class<google-chrome>": "<span color='#f9e2af'></span>",
       "title<nvim>": "<span color='#94e2d5'></span>",
-      "title<vim>": "<span color='#94e2d5'></span>"
+      "title<vim>": "<span color='#94e2d5'></span>",
+      "class<discord>": "<span color='#89b4fa'></span>"
     },
     "all-outputs": true,
     "disable-scroll": false,
