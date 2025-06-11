@@ -1,0 +1,7 @@
+[2025-06-11 12:23:08] Starting periodic script runner
+[2025-06-11 12:23:08] Executing script: swww-random-wallpaper.sh
+[2025-06-11 12:23:08] Script output: ./run_periodic.sh: line 21: swww-random-wallpaper.sh: command not found
+[2025-06-11 12:24:41] Starting periodic script runner
+[2025-06-11 12:24:41] Error: Script not found or not executable: ~/.config/hypr/scripts/swww-random-wallpaper.sh
+[2025-06-11 12:29:39] Starting periodic script runner
+[2025-06-11 12:29:39] Executing script: /home/cryptosaiyan/.config/hypr/scripts/swww-random-wallpaper.sh
