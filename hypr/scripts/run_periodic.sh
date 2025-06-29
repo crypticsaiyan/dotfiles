@@ -25,5 +25,5 @@ while true; do
         log_message "Error: Script not found or not executable: $SCRIPT_PATH"
     fi
     
-    sleep 300  # 5 minutes = 300 seconds
+    sleep 900  # 15 minutes = 900 seconds
 done

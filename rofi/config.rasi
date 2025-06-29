@@ -15,7 +15,7 @@ configuration {
 @theme "/dev/null"
 
 * {
-  main-bg:        #11111be6;
+  main-bg:        #181825e6;
   main-fg:        #cdd6f4ff;
   main-br:        #cba6f7ff;
   main-ex:        #f5e0dcff;
@@ -25,7 +25,7 @@ configuration {
   border-color:   transparent;
 
   bg:             @main-bg;
-  bg-alt:         #585b70;
+  bg-alt:         #b4befeff;
   bg-selected:    #313244;
 
   fg:             @main-fg;
@@ -38,7 +38,7 @@ configuration {
 }
 
 window {
-  width: 30%;
+  width: 40%;
   background-color: @bg;
 }
 
@@ -49,8 +49,9 @@ element {
 }
 
 element selected {
-  text-color: @select-fg;
-  background-color: @select-bg;
+  text-color: @fg;
+  border: 2px;
+  border-color: @select-bg;
 }
 
 element-text {
@@ -60,7 +61,7 @@ element-text {
 }
 
 element-icon {
-  size: 30;
+  size: 25;
   padding: 0 10 0 0;
   background-color: transparent;
 }
@@ -68,35 +69,42 @@ element-icon {
 entry {
   padding: 12;
   background-color: @bg-alt;
-  text-color: @fg;
+  text-color: @main-bg;
+}
+
+mainbox {
+  children: [leftbox, rightbox];
+  orientation: horizontal;
+}
+
+leftbox {
+  background-color: transparent;
+  background-image: url("/tmp/swww_last_wallpaper", height);
+}
+
+rightbox {
+  children: [inputbar, listview];
+  background-color: @bg;
 }
 
 inputbar {
   children: [prompt, entry];
   background-color: @bg;
-  border-radius: 10px 10px 0px 0px;
 }
 
 listview {
   background-color: @bg;
   columns: 1;
   lines: 10;
-  border-radius: 0px 0px 10px 10px;
 }
 
-mainbox {
-  children: [inputbar, listview];
-  background-color: @bg;
-  border: 3px;
-  border-color: @main-br;
-  border-radius: 10px;
-}
 
 prompt {
   enabled: true;
   padding: 12 0 0 12;
   background-color: @bg-alt;
-  text-color: @fg;
+  text-color: @main-bg;
+  font: "JetBrainsMono Nerd Font Bold 13";
 }
 
 /* vim: ft=sass */

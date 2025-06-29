@@ -36,3 +36,4 @@ keymap.set("n", "U", "<C-r>", { desc = "Remap redo key" })
 
 keymap.set('n', 'gf', "<CMD>call VSCodeCall('seito-openfile.openFileFromText')<CR>")
 
+keymap.set("n", "<leader>tw", "<CMD>call VSCodeNotify('workbench.action.terminal.focus')<CR>")

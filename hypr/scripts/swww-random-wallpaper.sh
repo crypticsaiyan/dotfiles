@@ -14,8 +14,8 @@ touch "$LOCKFILE"
 
 # Get last wallpaper (if any)
 LAST_WALLPAPER=""
-if [ -f "$LASTFILE" ]; then
-  LAST_WALLPAPER=$(cat "$LASTFILE")
+if [ -L "$LASTFILE" ]; then
+  LAST_WALLPAPER=$(readlink "$LASTFILE")
 fi
 
 # Pick a random wallpaper different from last
@@ -29,8 +29,9 @@ done
 # Set wallpaper with very fast transition
 swww img "$NEW_WALLPAPER" --transition-type any --transition-fps 165 --transition-duration 1
 
-# Save new wallpaper path
-echo "$NEW_WALLPAPER" > "$LASTFILE"
+# Remove old symlink and create new symlink
+rm -f "$LASTFILE"
+ln -s "$NEW_WALLPAPER" "$LASTFILE"
 
 # Wait a bit less (adjust if needed)
 sleep 1
