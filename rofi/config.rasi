@@ -5,7 +5,7 @@ configuration {
   font: "JetBrainsMono Nerd Font Medium 13";
   modi: "window,run,drun";
   show-icons: true;
-  icon-theme: "Tela-purple-dark";
+  icon-theme: "Catppuccin-SE";
   kb-accept-entry: "Return";
   kb-remove-to-eol: "";
   kb-row-up: "Control+k,Up";
@@ -41,6 +41,10 @@ window {
   width: 800px;
   height: 500px;
   background-color: @bg;
+  padding: 10;
+  border: 2px;
+  border-color: @select-bg;
+  border-radius: 15;
 }
 
 element {
@@ -76,7 +80,6 @@ entry {
 mainbox {
   children: [leftbox, rightbox];
   orientation: horizontal;
-  border-radius: 3px 3px 3px 3px;
   border-color: @bg-alt;
 }
 
@@ -100,7 +103,7 @@ listview {
   columns: 1;
   lines: 10;
   padding: 5 10 10 10;
-  margin: 10;
+  margin: 20;
 }
 
 
