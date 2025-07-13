@@ -213,6 +213,7 @@ window#waybar {
   background-color: rgba(30, 30, 46, 1);
   color: #cdd6f4;
   border: 2px solid #403d52;
+  font-size: 20px;
 }
 
 #workspaces button:first-child {

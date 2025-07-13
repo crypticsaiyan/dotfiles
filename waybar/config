@@ -63,7 +63,8 @@
       "class<org.pwmt.zathura>": "<span color='#f38ba8'></span>",
       "class<cheese>": "<span color='#f9e2af'></span>",
       "class<blueman-manager>": "<span color='#89b4fa'>B</span>",
-      "class<viewnior>": "<span color='#b4befe'></span>"
+      "class<viewnior>": "<span color='#b4befe'></span>",
+      "class<Postman>": "<span color='#fab387'></span>"
     },
     "all-outputs": true,
     "disable-scroll": false,
