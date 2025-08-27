@@ -211,8 +211,8 @@ window#waybar {
   /* background-color: #181825; */
   background-color: rgba(30, 30, 46, 1);
   color: #cdd6f4;
-  border: 2px solid @surface0;
-  border-bottom: 4px solid @surface0;
+  border: 2px solid @surface1;
+  border-bottom: 4px solid @surface1;
   font-size: 20px;
 }
 
@@ -258,8 +258,8 @@ window#waybar {
   border-radius: 5px;
   /* background-color: #181825; */
   background-color: rgba(30, 30, 46, 1);
-  border: 2px solid #403d52;
-  border-bottom: 4px solid @surface0;
+  border: 2px solid @surface1;
+  border-bottom: 4px solid @surface1;
   margin: 0.5rem 0.25rem;
 }
 
