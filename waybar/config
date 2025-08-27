@@ -1,5 +1,5 @@
 {
-  "layer": "bottom",
+  "layer": "top",
   "position": "top",
   "height": 30,
   "spacing": 2,
@@ -41,7 +41,9 @@
     "player-icons": {
       "default": " "
     }
-  },
+},
+
+
   "hyprland/workspaces": {
     "format": "{icon} {windows}",
     "format-window-separator": "  " ,

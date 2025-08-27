@@ -201,18 +201,18 @@ window#waybar {
   /* background-color: #181825; */
   /*background-color: #11111b; */
   background-color: rgba(17, 17, 27, 0);
-  /* background-color: rgba(24, 24, 37, 0.6); */
 }
 
 #workspaces button {
   padding: 2px 8px;
   padding-right: 12px;
-  margin: 0.4rem 0.25rem;
-  border-radius: 6px;
+  margin: 0.5rem 0.25rem;
+  border-radius: 5px;
   /* background-color: #181825; */
   background-color: rgba(30, 30, 46, 1);
   color: #cdd6f4;
-  border: 2px solid #403d52;
+  border: 2px solid @surface0;
+  border-bottom: 4px solid @surface0;
   font-size: 20px;
 }
 
@@ -231,6 +231,7 @@ window#waybar {
   /* color: #89b4fa; */
   color: white;
   border: 2px solid #b4befe;
+  border-bottom: 4px solid @lavender;
 }
 
 #workspaces button.urgent {
@@ -254,15 +255,18 @@ window#waybar {
 #mpris {
   padding: 2px 8px;
   margin: 0.4rem 0.25rem;
-  border-radius: 6px;
+  border-radius: 5px;
   /* background-color: #181825; */
   background-color: rgba(30, 30, 46, 1);
   border: 2px solid #403d52;
+  border-bottom: 4px solid @surface0;
+  margin: 0.5rem 0.25rem;
 }
 
 #mpris.playing {
-  color: #b4befe;
-  border: 2px solid #b4befe;
+  color: @teal;
+  border: 2px solid @teal;
+  border-bottom: 4px solid @teal;
 }
 
 #mpris.paused {
@@ -338,9 +342,11 @@ tooltip {
 #battery.critical,
 #battery.urgent {
   border: 2px solid #f38ba8; 
+  border-bottom: 4px solid @red;
   color: #f38ba8; 
 }
 #battery.charging{
   border: 2px solid #94e2d5;
+  border-bottom: 4px solid @teal;
   color: #94e2d5;
 }
