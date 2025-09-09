@@ -2,11 +2,13 @@
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
   "logo": {
     "padding": {
-      "top": 2
+      "top": 2,
+      "left": 2,
+      "right": 7
     },
-    "source": "/home/cryptosaiyan/Pictures/pixel/pokemon/mew.png",
+    "source": "/home/cryptosaiyan/Pictures/pixel/db/vegeta_blue.png",
     "type": "kitty",
-    "width": 30
+    "width": 18
   },
   "display": {
     "separator": " -> "
@@ -15,68 +17,69 @@
     {
       "type": "custom",
       // "format": "                  \u001b[31mcryptosaiyan \u001b[37m| \u001b[31mhustlemachine\u001b[0m "
-      "format": "[\u001b[1;31mcryp\u001b[38;2;245;194;231m70541\u001b[1;31my\u001b[38;2;245;194;231m4\u001b[1;31mn\u001b[37m]"
+      //      "format": "[\u001b[1;31mcryp\u001b[38;2;245;194;231m70541\u001b[1;31my\u001b[38;2;245;194;231m4\u001b[1;31mn\u001b[37m]"
+      "format": "[\u001b[1;34mcryp\u001b[38;2;180;190;254m70541\u001b[1;34my\u001b[38;2;180;190;254m4\u001b[1;34mn\u001b[37m]"
     },
     {
       "type": "custom",
       "format": "╭───────────────────────────────────────────╮"
     },
     {
-      "type": "os",
-      "key": "  "
+  "type": "os",
+  "key": "\u001b[38;2;137;180;250m  \u001b[0m"
     },
     {
-      "type": "host",
-      "key": "  "
+  "type": "host",
+  "key": "\u001b[38;2;137;180;250m  \u001b[0m"
     },
     {
-      "type": "kernel",
-      "key": "  ",
+  "type": "kernel",
+  "key": "\u001b[38;2;137;180;250m  \u001b[0m",
       "format": "{1} 6.2.1"
     },
     {
-      "type": "uptime",
-      "key": "  "
+  "type": "uptime",
+  "key": "\u001b[38;2;137;180;250m  \u001b[0m"
     },
     {
-      "type": "packages",
-      "key": "  "
+  "type": "packages",
+  "key": "\u001b[38;2;137;180;250m  \u001b[0m"
     },
     {
-      "type": "shell",
-      "key": " $ "
+  "type": "shell",
+  "key": "\u001b[38;2;137;180;250m $ \u001b[0m"
     },
     {
-      "type": "display",
-      "format": "{width}x{height} @ {refresh-rate}Hz",
-      "key": "  "
+  "type": "display",
+  "format": "{width}x{height} @ {refresh-rate}Hz",
+  "key": "\u001b[38;2;137;180;250m  \u001b[0m"
     },
     {
-      "type": "wm",
-      "key": "  ",
+  "type": "wm",
+  "key": "\u001b[38;2;137;180;250m  \u001b[0m",
       "format": "{1}(X11)"
     },
     {
-      "type": "terminalfont",
-      "key": "  "
+  "type": "terminalfont",
+  "key": "\u001b[38;2;137;180;250m  \u001b[0m"
     },
     {
-      "type": "cursor",
-      "key": "  "
+  "type": "cursor",
+  "key": "\u001b[38;2;137;180;250m  \u001b[0m"
     },
     {
-      "type": "terminal",
-      "key": "  "
+  "type": "terminal",
+  "key": "\u001b[38;2;137;180;250m  \u001b[0m"
     },
     {
-      "type": "cpu",
-      "format": "{name}",
-      "key": "  "
+  "type": "cpu",
+  "format": "{name}",
+  "key": "\u001b[38;2;137;180;250m  \u001b[0m"
     },
     {
-      "type": "gpu",
-      "format": "{name}",
-      "key": "  "
+  "type": "gpu",
+  "format": "{name}",
+  "key": "\u001b[38;2;137;180;250m  \u001b[0m"
     },
     {
       "type": "custom",
@@ -84,6 +87,6 @@
     },
     "poweradapter",
     "break",
-    "colors"
+    // "colors"
   ]
 }

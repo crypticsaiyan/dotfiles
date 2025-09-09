@@ -1,0 +1,26 @@
+# This file contains fish universal variable definitions.
+# VERSION: 3.0
+SETUVAR --export CRYPTOGRAPHY_OPENSSL_NO_LEGACY:1
+SETUVAR --export EDITOR:nvim
+SETUVAR --export ELECTRON_OZONE_PLATFORM_HINT:\x1d
+SETUVAR --export LANG:en_IN\x2eUTF\x2d8
+SETUVAR --export LC_ALL:en_IN\x2eUTF\x2d8
+SETUVAR --export --path LD_LIBRARY_PATH:/opt/cuda/lib64
+SETUVAR --export MANPAGER:sh\x20\x2dc\x20\x27col\x20\x2dbx\x20\x7c\x20bat\x20\x2dl\x20man\x20\x2dp\x27
+SETUVAR --export MANROFFOPT:\x2dc
+SETUVAR --export --path PATH:/opt/cuda/bin\x1e/home/cryptosaiyan/\x2espicetify\x1e/home/cryptosaiyan/\x2elocal/bin\x1e\x2elocal/bin/bear\x1e/usr/local/sbin\x1e/usr/local/bin\x1e/usr/bin\x1e/usr/lib/jvm/default/bin\x1e/usr/bin/site_perl\x1e/usr/bin/vendor_perl\x1e/usr/bin/core_perl
+SETUVAR --export SSH_AUTH_SOCK:setenv\x20SSH_AUTH_SOCK\x20/tmp/ssh\x2dXXXXXXk37d86/agent\x2e29425
+SETUVAR --export TERMINAL:kitty
+SETUVAR --export TERMINFO:/usr/share/terminfo
+SETUVAR __done_min_cmd_duration:10000
+SETUVAR __done_notification_urgency_level:low
+SETUVAR __fish_initialized:3800
+SETUVAR fish_color_comment:red
+SETUVAR fish_color_cwd_root:red
+SETUVAR fish_color_history_current:\x2d\x2dbold
+SETUVAR fish_color_host_remote:yellow
+SETUVAR fish_color_status:red
+SETUVAR fish_color_valid_path:\x2d\x2dunderline
+SETUVAR fish_key_bindings:fish_vi_key_bindings
+SETUVAR fish_pager_color_selected_background:\x2dr
+SETUVAR fish_user_paths:/home/cryptosaiyan/\x2espicetify

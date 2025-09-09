@@ -1,179 +1,136 @@
-## FIRST LINE/ROW: Info & Status
-# First param ─┌
+format = """
+$directory\
+$git_branch\
+$git_status\
+$character\
+"""
 
-palette = "catppuccin_mocha"
+right_format = """
+$time\
+$cmd_duration (fg:bold yellow)\
+$golang\
+$nodejs\
+$python\
+$docker_context\
+$battery\
+"""
+# $memory_usage\
+
+[character]
+success_symbol = '[ ~>](fg:#b4befe)'
+error_symbol = '[ ~>](bold red)'
+vimcmd_symbol = '[ <~](bold #cba6f7)'
+vimcmd_replace_symbol = '[<~](bold #cba6f7)'
+vimcmd_visual_symbol = '[V](bold yellow)'
+
+
+[cmd_duration]
+min_time = 500
+format = 'takes (bold yellow)[$duration](bold yellow)'
+
+[memory_usage]
+disabled = false
+threshold = -1
+symbol = ''
+style = 'bold dimmed green'
+
+[battery]
+disabled = false
+format = " [$symbol$percentage ]($style)"
+full_symbol = "󱊢 "
+discharging_symbol = "󱊢 "
+charging_symbol = "󰂄 "
+unknown_symbol = "󰁽 "
+empty_symbol = "󰂎 "
+
+[[battery.display]]
+threshold = 70
+style = "fg:#94e2d5"
 
 [username]
-format = " [╭─$user]($style) in "
 show_always = true
-style_root = "bold red"
-style_user = "bold red"
+style_user = "fg:#f38ba8"
+format = "[$user]($style)"
 
-# Second param
 [hostname]
-disabled = true
-format = "[$hostname]($style) in "
 ssh_only = false
-style = "bold maroon"
-trim_at = "-"
+style = "fg:#f5c2e7"
+format = "[$hostname]($style)"
+disabled = false
+aliases = { "arch" = "arch" }
 
-# Third param
 [directory]
-style = "pink"
-truncate_to_repo = true
-truncation_length = 0
-truncation_symbol = "repo: "
-
-# Fourth param
-[sudo]
-disabled = false
-
-# Before all the version info (python, nodejs, php, etc.)
-[git_status]
-ahead = "⇡${count}"
-behind = "⇣${count}"
-deleted = "x"
-diverged = "⇕⇡${ahead_count}⇣${behind_count}"
-style = "white"
-
-# Last param in the first line/row
-[cmd_duration]
-disabled = false
-format = "took [$duration]($style)"
-min_time = 1
-
-## SECOND LINE/ROW: Prompt
-# Somethere at the beginning
-[battery]
-charging_symbol = ""
-disabled = true
-discharging_symbol = ""
-full_symbol = ""
-
-[[battery.display]] # "bold red" style when capacity is between 0% and 15%
-disabled = false
-style = "bold red"
-threshold = 15
-
-[[battery.display]] # "bold yellow" style when capacity is between 15% and 50%
-disabled = true
-style = "bold yellow"
-threshold = 50
-
-[[battery.display]] # "bold green" style when capacity is between 50% and 80%
-disabled = true
-style = "bold green"
-threshold = 80
-
-# Prompt: optional param 1
-[time]
-disabled = true
-format = " 🕙 $time($style)\n"
-style = "bright-white"
-time_format = "%T"
-
-# Prompt: param 2
-[character]
-error_symbol = " [×](bold red)"
-success_symbol = " [╰─λ](bold red)"
-
-# SYMBOLS
-[status]
-disabled = false
-format = '[\[$symbol$status_common_meaning$status_signal_name$status_maybe_int\]]($style)'
-map_symbol = true
-pipestatus = true
-symbol = "🔴"
-
-[aws]
-symbol = " "
-
-[conda]
-symbol = " "
-
-[dart]
-symbol = " "
-
-[docker_context]
-symbol = " "
-
-[elixir]
-symbol = " "
-
-[elm]
-symbol = " "
+style = "fg:blue"
+format = " [$path]($style)"
+truncate_to_repo = false
+truncation_length = 1
+fish_style_pwd_dir_length = 1
+use_logical_path = true
 
 [git_branch]
-symbol = " "
+symbol = " 󰘬"
+style = "fg:#f9e2af"
+format = "[$symbol $branch]($style)"
+
+[git_status]
+style = "fg:#f9e2af"
+format = '([\($all_status$ahead_behind\)]($style))'
 
 [golang]
 symbol = " "
-
-[hg_branch]
-symbol = " "
-
-[java]
-symbol = " "
-
-[julia]
-symbol = " "
-
-[nim]
-symbol = " "
-
-[nix_shell]
-symbol = " "
+style = "fg:#94e2d5"
+format = "[ $symbol($version)]($style)"
 
 [nodejs]
-symbol = " "
-
-[package]
-symbol = " "
-
-[perl]
-symbol = " "
-
-[php]
-symbol = " "
+symbol = ""
+style = "fg:#a6e3a1"
+format = "[ $symbol ($version)]($style)"
 
 [python]
-symbol = " "
+symbol = ""
+style = "fg:#89dceb"
+format = "[ $symbol ($version)]($style)"
 
-[ruby]
-symbol = " "
+[docker_context]
+symbol = ""
+style = "fg:#89b4fa"
+format = "[ $symbol $context]($style)"
+
+[time]
+disabled = false
+time_format = "%R"
+style = "fg:#585b70"
+format = " [$time]($style)"
+
+[os]
+disabled = true
 
 [rust]
-symbol = " "
+disabled = true
 
-[swift]
-symbol = "ﯣ "
+[scala]
+disabled = true
 
+[c]
+disabled = true
 
+[elixir]
+disabled = true
 
-[palettes.catppuccin_mocha]
-rosewater = "#f5e0dc"
-flamingo = "#f2cdcd"
-pink = "#f5c2e7"
-mauve = "#cba6f7"
-red = "#f38ba8"
-maroon = "#eba0ac"
-peach = "#fab387"
-yellow = "#f9e2af"
-green = "#a6e3a1"
-teal = "#94e2d5"
-sky = "#89dceb"
-sapphire = "#74c7ec"
-blue = "#89b4fa"
-lavender = "#b4befe"
-text = "#cdd6f4"
-subtext1 = "#bac2de"
-subtext0 = "#a6adc8"
-overlay2 = "#9399b2"
-overlay1 = "#7f849c"
-overlay0 = "#6c7086"
-surface2 = "#585b70"
-surface1 = "#45475a"
-surface0 = "#313244"
-base = "#1e1e2e"
-mantle = "#181825"
-crust = "#11111b"
+[elm]
+disabled = true
+
+[gradle]
+disabled = true
+
+[haskell]
+disabled = true
+
+[java]
+disabled = true
+
+[julia]
+disabled = true
+
+[nim]
+disabled = true
