@@ -113,7 +113,7 @@
     "interval": 1
   },
   "memory": {
-    "format": " {used:0.1f}Gi"
+    "format": " {used:0.1f}Gi"
   },
   "pulseaudio": {
     "format": "{icon}{volume}%",
